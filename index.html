@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- preload -->
+  <link rel="preload" href="font/BarlowSemiCondensed-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="font/BarlowSemiCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- css custum file -->
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+<body>
+  <div class="menu">
+    <h1 class="menu__title">choose a game</h1>
+    <ul class="menu__games">
+      <div class="menu__game" id="game-1-btn">
+          <img src="images/logo.svg" alt="">
+      </div>
+      <div class="menu__game" id="game-2-btn">
+          <img src="images/logo-bonus.svg" alt="">
+      </div>
+    </ul>
+  </div>
+  <div class="game active" id="game-1">
+    <header class="game__header">
+      <div class="game__logo">
+        <img src="images/logo.svg" alt="logo">
+      </div>
+      <div class="game__score">
+        <span class="game__score-text">SCORE</span>
+        <span class="game__score-num">12</span>
+      </div>
+    </header>
+    <main class="game__icons">
+      <div class="game__icon">
+        <img src="images/icon-paper.svg" alt="paper">
+      </div>
+      <div class="game__icon">
+        <img src="images/icon-scissors.svg" alt="scissors">
+      </div>
+      <div class="game__icon">
+        <img src="images/icon-rock.svg" alt="rock">
+      </div>
+    </main>
+    <footer class="game__footer">
+      <button class="game__footer-back">BACK TO MENU</button>
+      <button class="game__footer-rules">RULES</button>
+    </footer>
+    <div class="game__rules">
+      <div class="game__rules-overlay"></div>
+      <div class="box">
+        <div class="game__rules-text">
+          <h2>RULES</h2>
+          <img src="images/icon-close.svg" alt="">
+        </div>
+        <div class="game__rules-img">
+          <img src="images/image-rules.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="game" id="game-2">
+    <header class="game__header">
+      <div class="game__logo">
+        <img src="images/logo-bonus.svg" alt="logo">
+      </div>
+      <div class="game__score">
+        <span class="game__score-text">SCORE</span>
+        <span class="game__score-num">12</span>
+      </div>
+    </header>
+    <main class="game__cards">
+      <div class="game__card">
+        <img src="images/icon-spock.svg" alt="paper">
+      </div>
+      <div class="game__card">
+        <img src="images/icon-scissors.svg" alt="paper">
+      </div>
+      <div class="game__card">
+        <img src="images/icon-paper.svg" alt="paper">
+      </div>
+      <div class="game__card">
+        <img src="images/icon-lizard.svg" alt="paper">
+      </div>
+      <div class="game__card">
+        <img src="images/icon-rock.svg" alt="paper">
+      </div>
+    </main>
+    <footer class="game__footer">
+      <button class="game__footer-back">BACK TO MENU</button>
+      <button class="game__footer-rules">RULES</button>
+    </footer>
+    <div class="game__rules">
+      <div class="game__rules-overlay"></div>
+      <div class="box">
+        <div class="game__rules-text">
+          <h2>RULES</h2>
+          <img src="images/icon-close.svg" alt="">
+        </div>
+        <div class="game__rules-img">
+          <img src="images/image-rules-bonus.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
