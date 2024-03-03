@@ -131,68 +131,71 @@ iconsArr.forEach( (icon) =>
   icon.addEventListener( "click", () =>
   {
     icons.classList.add("step-2")
-    icon.classList.add( "yourPicked" )
-    let int = setInterval( () =>
+    if ( icon.classList.length == 1 )
     {
-      let num = document.querySelector(".count")
-      num.innerHTML--
-      if ( num.innerHTML == "0" )
+      icon.classList.add( "yourPicked" )
+      let int = setInterval( () =>
       {
-        clearInterval( int )
-        for ( let i = 0; i < iconsArr.length; i++ )
+        let num = document.querySelector(".count")
+        num.innerHTML--
+        if ( num.innerHTML == "0" )
         {
-          if ( iconsArr[ i ].classList.length == 1 )
+          clearInterval( int )
+          icons.classList.add( "step-4" )
+          let notPicked = []
+          let rad = Math.floor(Math.random()*2)
+          iconsArr.forEach( i =>
           {
-            iconsArr[i].classList.add("housePicked")
-            iconsArr[i].style.display = "flex"
-            iconsArr[i].style.order = "3"
-            iconsArr[0].style.display = "none"
-            break;
-          }
+            if(i.classList.length == 1) notPicked.push(i) 
+          } )
+          notPicked[rad].classList.add("housePicked")
+          notPicked[rad].style.display = "flex"
+          notPicked[rad].style.order = "3"
+          let t = document.querySelector(".game__icons .game__step-2")
+          t.style.display = "none"
+          let housePicked = document.querySelector(".housePicked").id.slice(0, -2)
+          let yourPicked = document.querySelectorAll( ".yourPicked" )[0].id.slice( 0, -2 )
+          let n = document.querySelector( ".game.active" ).id.slice( -1 ) - 1;
+          howWin(yourPicked, housePicked, n)
         }
-        icons.classList.add( "step-4" )
-        let housePicked = document.querySelector(".housePicked").id.slice(0, -2)
-        let yourPicked = document.querySelector( ".yourPicked" ).id.slice( 0, -2 )
-        let n = document.querySelector( ".game.active" ).id.slice( -1 ) - 1;
-        console.log(n)
-        howWin(yourPicked, housePicked, n)
-      }
-    }, 1000)
+      }, 1000)
+    }
   } )
 } );
 cardsArr.forEach( (card) =>
 {
   card.addEventListener( "click", () =>
   {
-    cards.classList.add("step-2")
-    card.classList.add( "yourPicked" )
-    let int = setInterval( () =>
-    {
-      let num = document.querySelectorAll(".count")[1]
-      num.innerHTML--
-      if ( num.innerHTML == "0" )
+    cards.classList.add( "step-2" )
+    if ( card.classList.length == 1 )
+    {      
+      card.classList.add( "yourPicked" )
+      let int = setInterval( () =>
       {
-        clearInterval( int )
-        cards.classList.add( "step-4" )
-        var notPicked = []
-        cardsArr.forEach( c =>
-          {
-            if ( c.classList.length == 1 ) notPicked.push( c )
-          } )
-        let rad = Math.floor( Math.random() * 5 )
-        console.log(rad)
-        notPicked[ rad ].classList.add( "housePicked" )
-        notPicked[ rad ].style.display = "flex"
-        notPicked[ rad ].style.order = "3"
-        let t = document.querySelector(".game__cards .game__step-2")
-        t.style.display = "none"
-        let housePicked = document.querySelector(".housePicked").id
-        let yourPicked = document.querySelector( ".yourPicked" ).id
-        let n = document.querySelector( ".game.active" ).id.slice( -1 ) - 1;
-        howWin(yourPicked, housePicked, n)
-      }
-    }, 1000)
+        let num = document.querySelectorAll(".count")[1]
+        num.innerHTML--
+        if ( num.innerHTML == "0" )
+        {
+          clearInterval( int )
+          cards.classList.add( "step-4" )
+          var notPicked = []
+          cardsArr.forEach( c =>
+            {
+              if ( c.classList.length == 1 ) notPicked.push( c )
+            } )
+          let rad = Math.floor( Math.random() * 4 )
+          console.log(rad)
+          notPicked[ rad ].classList.add( "housePicked" )
+          notPicked[ rad ].style.display = "flex"
+          notPicked[ rad ].style.order = "3"
+          let t = document.querySelector(".game__cards .game__step-2")
+          t.style.display = "none"
+          let housePicked = document.querySelector(".housePicked").id
+          let yourPicked = document.querySelector( ".yourPicked" ).id
+          let n = document.querySelector( ".game.active" ).id.slice( -1 ) - 1;
+          howWin(yourPicked, housePicked, n)
+        }
+      }, 1000)
+    }
   } )
 } );
-
-// howWin("paper", "rock", 1)

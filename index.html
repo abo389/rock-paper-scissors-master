@@ -14,14 +14,14 @@
 <body>
   <div class="menu">
     <h1 class="menu__title">choose a game</h1>
-    <ul class="menu__games">
+    <div class="menu__games">
       <div class="menu__game" id="game-1-btn">
           <img src="images/logo.svg" alt="">
       </div>
       <div class="menu__game" id="game-2-btn">
           <img src="images/logo-bonus.svg" alt="">
       </div>
-    </ul>
+    </div>
   </div>
   <div class="game active" id="game-1">
     <header class="game__header">
@@ -37,18 +37,18 @@
       <div class="game__step-2 game__icon">
         <div class="count">3</div>
       </div>
+      <div tabindex="0" class="game__icon" id="paper-1">
+        <img src="images/icon-paper.svg" alt="paper">
+      </div>
+      <div tabindex="0" class="game__icon" id="scissors-1">
+        <img src="images/icon-scissors.svg" alt="scissors">
+      </div>
+      <div tabindex="0" class="game__icon" id="rock-1">
+        <img src="images/icon-rock.svg" alt="rock">
+      </div>
       <div class="game__result gg">
         <h2 class="game__result-state">you <span id="result">win</span></h2>
         <button class="again">play again</button>
-      </div>
-      <div class="game__icon" id="paper-1">
-        <img src="images/icon-paper.svg" alt="paper">
-      </div>
-      <div class="game__icon" id="scissors-1">
-        <img src="images/icon-scissors.svg" alt="scissors">
-      </div>
-      <div class="game__icon" id="rock-1">
-        <img src="images/icon-rock.svg" alt="rock">
       </div>
     </main>
     <footer class="game__footer">
@@ -86,19 +86,19 @@
         <h2 class="game__result-state">you <span id="result">win</span></h2>
         <button class="again">play again</button>
       </div>
-      <div class="game__card" id="spock">
+      <div tabindex="0" class="game__card" id="spock">
         <img src="images/icon-spock.svg" alt="spock">
       </div>
-      <div class="game__card" id="scissors">
+      <div tabindex="0" class="game__card" id="scissors">
         <img src="images/icon-scissors.svg" alt="scissors">
       </div>
-      <div class="game__card" id="paper">
+      <div tabindex="0" class="game__card" id="paper">
         <img src="images/icon-paper.svg" alt="paper">
       </div>
-      <div class="game__card" id="lizard">
+      <div tabindex="0" class="game__card" id="lizard">
         <img src="images/icon-lizard.svg" alt="lizard">
       </div>
-      <div class="game__card" id="rock">
+      <div tabindex="0" class="game__card" id="rock">
         <img src="images/icon-rock.svg" alt="rock">
       </div>
     </main>

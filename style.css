@@ -63,6 +63,9 @@ body {
     width: auto;
     height: auto;
 }
+.menu.active .menu__games {
+    height: auto;
+}
 /* ################################# */
 .menu__title {
     font-size: 40px;
@@ -79,6 +82,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    height: 0;
 }
 .menu__game {
     width: 200px;
@@ -320,17 +324,17 @@ body {
 /* ################################# */
 /* step-2 */
 /* ################################# */
-.game__step-2,
+#game-1 .game__step-2,
 #game-2 .game__step-2,
 .game__result {
     display: none;
 }
 
-.step-2 .game__icon:hover,
+#game-1 .step-2 .game__icon:hover,
 #game-2 .step-2 .game__card:hover {
     transform: scale(100%);
 }
-.step-2 #rock-1 {
+#game-1 .step-2 #rock-1 {
     margin-top: 0;
 }
 #game-2 .step-2 #scissors {
@@ -341,7 +345,7 @@ body {
     margin-right: 0;
     margin-top: 0;
 }
-.step-2 .game__step-2,
+#game-1 .step-2 .game__step-2,
 #game-2 .step-2 .game__step-2 {
     display: flex;
     background: var(--Dark-Text);
@@ -351,6 +355,7 @@ body {
 #game-1 .game__icons.step-2,
 #game-2 .game__cards.step-2 {
     flex-direction: row;
+    align-items: center;
     flex-wrap: nowrap;
     gap: 40px;
     padding: 100px 0;
@@ -372,20 +377,20 @@ body {
     font-size: 40px;
     color: var(--gray);
 }
-.step-2 .game__icon.yourPicked,
+#game-1 .step-2 .game__icon.yourPicked,
 #game-2 .step-2 .game__card.yourPicked,
-.step-2 .game__icon.housePicked,
+#game-1 .step-2 .game__icon.housePicked,
 #game-2 .step-2 .game__card.housePicked,
-.step-2 .game__icon.game__step-2,
+#game-1 .step-2 .game__icon.game__step-2,
 #game-2 .step-2 .game__card.game__step-2 {
     display: flex;
     width: 120px;
     height: 120px;
     position: relative;
 }
-.step-2 .game__icon.yourPicked::after,
+#game-1 .step-2 .game__icon.yourPicked::after,
 #game-2 .step-2 .game__card.yourPicked::after,
-.step-2 .game__icon::after,
+#game-1 .step-2 .game__icon::after,
 #game-2 .step-2 .game__card::after {
     content: "your picked";
     position: absolute;
@@ -398,28 +403,32 @@ body {
     text-align: center;
     transform: translateX(-50%);
 }
-.step-2 .game__icon::after,
+#game-1 .step-2 .game__icon::after,
 #game-2 .step-2 .game__card::after {
     content: "the house picked";
+}
+#game-1 .step-2 .game__step-2::after,
+#game-2 .step-2 .game__step-2::after {
+    top: -50px;
 }
 /* ################################# */
 /* step-4 */
 /* ################################# */
-.step-4 .game__result,
+#game-1 .step-4 .game__result,
 #game-2 .step-4 .game__result {
     display: block;
     order: 2;
     text-align: center;
     transition: .3s;
 }
-.step-4 .game__result-state,
+#game-1 .step-4 .game__result-state,
 #game-2 .step-4 .game__result-state {
     font-size: 40px;
     text-transform: uppercase;
     margin-bottom: 20px;
     color: var(--gray);
 }
-.step-4 .game__result .again,
+#game-1 .step-4 .game__result .again,
 #game-2 .step-4 .game__result .again {
     padding: 10px 20px;
     border-radius: 10px;
@@ -427,7 +436,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
 }
-.step-4 .game__result .again:hover,
+#game-1 .step-4 .game__result .again:hover,
 #game-2 .step-4 .game__result .again:hover {
     color: var(--Rock-Gradient);
 }
