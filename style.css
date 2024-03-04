@@ -458,7 +458,7 @@ body {
 }
 @media screen and (max-width: 500px) {
     .game.active {
-        min-width: 300px;
+        min-width: 320px;
     }
     .game__header {
         padding: 10px;
@@ -530,34 +530,30 @@ body {
     #game-2 #rock {
         margin-top: -50px;
     }
-    .game__icons.step-2 {
-        flex-direction: column;
-        padding: 20px 0 0;
-    }
     #game-1 .game__icons.step-2,
     #game-2 .game__cards.step-2 {
         gap: 20px;
     }
-    .step-4 .game__result-state,
+    #game-1 .step-4 .game__result-state,
     #game-2 .step-4 .game__result-state {
         font-size: 20px;
     }
-    .step-4 .game__result .again,
+    #game-1 .step-4 .game__result .again,
     #game-2 .step-4 .game__result .again {
         font-size: 11px;
         padding: 5px;
     }
-    .step-2 .game__icon.yourPicked::after,
+    #game-1 .step-2 .game__icon.yourPicked::after,
     #game-2 .step-2 .game__card.yourPicked::after,
-    .step-2 .game__icon::after,
+    #game-1 .step-2 .game__icon::after,
     #game-2 .step-2 .game__card::after {
         font-size: 15px;
     }
-    .step-2 .game__icon.yourPicked,
+    #game-1 .step-2 .game__icon.yourPicked,
     #game-2 .step-2 .game__card.yourPicked,
-    .step-2 .game__icon.housePicked,
+    #game-1 .step-2 .game__icon.housePicked,
     #game-2 .step-2 .game__card.housePicked,
-    .step-2 .game__icon.game__step-2,
+    #game-1 .step-2 .game__icon.game__step-2,
     #game-2 .step-2 .game__card.game__step-2 {
         width: 100px;
         height: 100px;
