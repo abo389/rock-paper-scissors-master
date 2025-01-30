@@ -2,7 +2,7 @@
 
 ## 🚀 Demo : https://abo389.github.io/rock-paper-scissors-master/
 
-[![https://markdown-videos-api.jorgenkh.no/vimeo/1051805369%2F37000527ba?width=320&height=180&filetype=png]](https://vimeo.com/1051805369/37000527ba)
+[![](https://markdown-videos-api.jorgenkh.no/vimeo/1051805369%2F37000527ba?width=320&height=180&filetype=png)](https://vimeo.com/1051805369/37000527ba)
 
 
 ## 📖 Description
